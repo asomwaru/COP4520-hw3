@@ -60,6 +60,7 @@ public class Report implements Runnable {
 
 		System.out.println("\nThe largest difference in temperatures was " + maxDelta + " between " + maxDeltaIndex
 				+ " and " + (maxDeltaIndex + this.CHANGE_INT));
+		System.out.println();
 	}
 
 	public void run() {

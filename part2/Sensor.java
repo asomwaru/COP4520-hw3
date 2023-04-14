@@ -24,15 +24,11 @@ public class Sensor implements Runnable {
 		this.READINGS_PER_SENSOR = readingsPerSensor;
 	}
 
-	private int readTemp() {
-		return rand.nextInt(this.RANGE + 1) - Math.abs(this.LOW);
-	}
-
 	public void run() {
 
 		while (totalReadings * READING_INT < this.TOTAL_TIME) {
 			int index = totalReadings++ % this.READINGS_PER_SENSOR;
-			readings[index] = readTemp();
+			readings[index] = rand.nextInt(this.RANGE + 1) - Math.abs(this.LOW);
 
 			try {
 				Thread.sleep(this.READING_INT);

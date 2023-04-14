@@ -8,7 +8,7 @@ public class Rover {
 	static final int LOW = -100, HIGH = 70, RANGE = HIGH - LOW;
 	static final int READING_INT = 50, REPORT_INT = READING_INT * 60, CHANGE_INT = 10;
 	static final int READINGS_PER_SENSOR = REPORT_INT / READING_INT;
-	static final int NUM_REPORTS = 5, TOTAL_TIME = REPORT_INT * NUM_REPORTS;
+	static final int NUM_REPORTS = 8, TOTAL_TIME = REPORT_INT * NUM_REPORTS;
 
 	public static void main(String[] args) throws InterruptedException, FileNotFoundException {
 		int[][] readings = new int[NUM_SENSORS][READINGS_PER_SENSOR];
