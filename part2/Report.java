@@ -3,7 +3,6 @@ package part2;
 import java.util.*;
 
 public class Report implements Runnable {
-	private static final String spacer = " ------------------------------- ", nl = "\n";
 	private final int[][] readings;
 
 	private static int index = 0;
@@ -49,17 +48,17 @@ public class Report implements Runnable {
 		Arrays.sort(maxTemps);
 		Arrays.sort(minTemps);
 
-		System.out.println(nl + spacer + "Report #" + index + spacer + nl);
+		System.out.println("Report #" + index);
 
 		System.out.print("The five highest reported temperatures were:");
 		for (int i = this.READINGS_PER_SENSOR - 1; i > this.READINGS_PER_SENSOR - 6; i--)
 			System.out.print(" " + maxTemps[i]);
 
-		System.out.print(nl + "The five lowest reported temperatures were:");
+		System.out.print("\nThe five lowest reported temperatures were:");
 		for (int i = 0; i < 5; i++)
 			System.out.print(" " + minTemps[i]);
 
-		System.out.println(nl + "The largest difference in temperatures was " + maxDelta + " between " + maxDeltaIndex
+		System.out.println("\nThe largest difference in temperatures was " + maxDelta + " between " + maxDeltaIndex
 				+ " and " + (maxDeltaIndex + this.CHANGE_INT));
 	}
 
